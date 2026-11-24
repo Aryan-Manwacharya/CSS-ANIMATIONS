@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Learning Environment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="environment">
+        <header>
+            <h1>CSS <span>Dimensions</span></h1>
+            <p>Navigate through the 3D space to explore CSS properties</p>
+        </header>
+
+        <div class="navigation">
+            <button class="nav-btn active" data-section="gradients">Gradients</button>
+            <button class="nav-btn" data-section="shadows">Shadows</button>
+            <button class="nav-btn" data-section="transforms">Transforms</button>
+            <button class="nav-btn" data-section="animations">Animations</button>
+        </div>
+
+        <div class="scene">
+            <div class="world" id="world">
+                <!-- Gradients Section -->
+                <div class="section active" id="gradients">
+                    <div class="shape shape-1">
+                        <div class="code-snippet">
+                            <pre>background: linear-gradient(45deg, #FF6B6B, #4ECDC4);</pre>
+                        </div>
+                    </div>
+                    <div class="shape shape-2">
+                        <div class="code-snippet">
+                            <pre>background: radial-gradient(circle, #FFE66D, #FF6B6B);</pre>
+                        </div>
+                    </div>
+                    <div class="shape shape-3">
+                        <div class="code-snippet">
+                            <pre>background: conic-gradient(from 0deg, #4ECDC4, #FF6B6B, #FFE66D);</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shadows Section -->
+                <div class="section" id="shadows">
+                    <div class="shape shadow-shape-1">
+                        <div class="code-snippet">
+                            <pre>box-shadow: 10px 10px 30px rgba(0,0,0,0.5);</pre>
+                        </div>
+                    </div>
+                    <div class="shape shadow-shape-2">
+                        <div class="code-snippet">
+                            <pre>text-shadow: 2px 2px 8px rgba(78,205,196,0.8);</pre>
+                        </div>
+                    </div>
+                    <div class="shape shadow-shape-3">
+                        <div class="code-snippet">
+                            <pre>filter: drop-shadow(0 0 15px rgba(255,107,107,0.7));</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transforms Section -->
+                <div class="section" id="transforms">
+                    <div class="shape transform-shape-1">
+                        <div class="code-snippet">
+                            <pre>transform: rotate3d(1, 1, 1, 45deg);</pre>
+                        </div>
+                    </div>
+                    <div class="shape transform-shape-2">
+                        <div class="code-snippet">
+                            <pre>transform: scale3d(1.5, 0.8, 1);</pre>
+                        </div>
+                    </div>
+                    <div class="shape transform-shape-3">
+                        <div class="code-snippet">
+                            <pre>transform: translate3d(20px, -30px, 50px);</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animations Section -->
+                <div class="section" id="animations">
+                    <div class="shape animation-shape-1">
+                        <div class="code-snippet">
+                            <pre>animation: float 3s ease-in-out infinite;</pre>
+                        </div>
+                    </div>
+                    <div class="shape animation-shape-2">
+                        <div class="code-snippet">
+                            <pre>animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;</pre>
+                        </div>
+                    </div>
+                    <div class="shape animation-shape-3">
+                        <div class="code-snippet">
+                            <pre>animation: spin 4s linear infinite;</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="rotate-left"><span>←</span></button>
+            <button id="rotate-right"><span>→</span></button>
+            <button id="rotate-up"><span>↑</span></button>
+            <button id="rotate-down"><span>↓</span></button>
+            <button id="zoom-in"><span>+</span></button>
+            <button id="zoom-out"><span>−</span></button>
+            <button id="reset-view"><span>Reset View</span></button>
+        </div>
+
+        <div class="property-info">
+            <h2>CSS Property Info</h2>
+            <div id="property-details">
+                <p>Hover over a shape to see details about its CSS properties.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
